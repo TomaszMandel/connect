@@ -1,4 +1,4 @@
-console.log("Javascript is working and it's mood is fine")
+console.log("Javascript is working and in fine mood")
 
 // Initialize active user.
 let activeUser = "red";
