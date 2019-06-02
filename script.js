@@ -9,15 +9,12 @@ let currentCounter = 0;
 document.getElementById("message").innerHTML = activeUser;
 document.getElementById("span-counter").innerHTML = currentCounter;
 
-<<<<<<< HEAD
 // Get input from and use it to display welcome message on leaving focus.
 function welcomeMessage() {
     input = document.getElementById("welcome-input").value
     document.getElementById("welcome-span").innerHTML = "Siadaj do gry, " + input
 }
 
-=======
->>>>>>> 7d86da8c83e45488ae5357ee04fe0d4465960b38
 // Switch current user to the opposite one. Red to blue, and otherwise.
 function switchUser(currentUser) {
     if(currentUser === "red") {
@@ -39,17 +36,10 @@ function counterIncrementBy1() {
     document.getElementById("span-counter").innerHTML = currentCounter;
 }
 
-<<<<<<< HEAD
 // Decrease counter by 1. Min. value is 0.
 function counterDecrementBy1() {
     if(currentCounter > 0) {
     currentCounter--;
     document.getElementById("span-counter").innerHTML = currentCounter;
     } else {}
-=======
-// Decrease counter by 1.
-function counterDecrementBy1() {
-    currentCounter--;
-    document.getElementById("span-counter").innerHTML = currentCounter;
->>>>>>> 7d86da8c83e45488ae5357ee04fe0d4465960b38
 }
