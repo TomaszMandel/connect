@@ -12,8 +12,13 @@ document.getElementById("span-counter").innerHTML = currentCounter;
 // Get input from and use it to display welcome message on leaving focus.
 function welcomeMessage() {
     input = document.getElementById("welcome-input").value
+    if(input) {
     console.log("User name is: " + input)
-    document.getElementById("welcome-span").innerHTML = "Siadaj do gry, " + input
+    document.getElementById("div-welcome-message").innerHTML = "Siadaj do gry, " + input
+    } else {
+        console.log("User name is unknown")
+        document.getElementById("div-welcome-message").innerHTML = "Siadaj do gry, nienazwany graczu"
+    }
 }
 
 // Switch current user to the opposite one. Red to blue, and otherwise.
