@@ -72,10 +72,11 @@ function countClicks(name) {
     } else {
         userClicks.Tomek++;
     }
- console.log(userClicks)
+    lastClicked(name);
+    console.log(userClicks)
 }
 
-// Puts the number of clicks and last clickedto div.
+// Counts which property of userClicks in div-'name' was clicked the last, and print that into div.
 function lastClicked(name) {
-
+    document.getElementById("div-last-selected").innerHTML = "Ostatnio kliknięty user to: " + name;
 }
