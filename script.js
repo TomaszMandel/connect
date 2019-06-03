@@ -4,6 +4,13 @@ console.log("Javascript is working and in fine mood")
 let activeUser = "red";
 // Initialize counter.
 let currentCounter = 0;
+// Initialize counter of clicks per user.
+let userClicks = {
+    "Magda": 0,
+    "Kamila": 0,
+    "Tomek": 0,
+}
+console.log(userClicks)
 
 // Display active user and counter.
 document.getElementById("message").innerHTML = activeUser;
@@ -53,4 +60,22 @@ function counterDecrementBy1() {
     currentCounter--;
     counterUpdateValue(currentCounter);
     } else {}
+}
+
+// Count clicks on userClicks properties on div-'name'.
+// TODO: instead of doing ifs, think how to just update the desired property.
+function countClicks(name) {
+    if(name == "Magda") {
+        userClicks.Magda++;
+    } else if(name == "Kamila") {
+        userClicks.Kamila++;
+    } else {
+        userClicks.Tomek++;
+    }
+ console.log(userClicks)
+}
+
+// Puts the number of clicks and last clickedto div.
+function lastClicked(name) {
+
 }
