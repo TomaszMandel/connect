@@ -62,30 +62,17 @@ function counterDecrementBy1() {
     } else {}
 }
 
-// Count clicks on userClicks properties on div-'name'.
+// Doing countClicks in forin loop.
+// TODO: why [] brackets and user? How does it work?
 function countClicks(name) {
-    if(name == "Magda") {
-        userClicks.Magda++;
-    } else if(name == "Kamila") {
-        userClicks.Kamila++;
-    } else {
-        userClicks.Tomek++;
+    for (user in userClicks) {
+        if(name == user) {
+            userClicks[user]++;
+        }
     }
     lastClicked(name);
     console.log(userClicks)
 }
-
-// // Doing countClicks in forin loop.
-// // TODO: how to increment a property?
-// function countClicks(name) {
-//     for (user in userClicks) {
-//         if(name == user) {
-//             userClicks.name++;
-//         }
-//     }
-//     lastClicked(name);
-//     console.log(userClicks)
-// }
 
 // Counts which property of userClicks in div-'name' was clicked the last, and print that into div.
 function lastClicked(name) {
