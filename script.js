@@ -63,7 +63,6 @@ function counterDecrementBy1() {
 }
 
 // Count clicks on userClicks properties on div-'name'.
-// TODO: instead of doing ifs, think how to just update the desired property.
 function countClicks(name) {
     if(name == "Magda") {
         userClicks.Magda++;
@@ -75,6 +74,18 @@ function countClicks(name) {
     lastClicked(name);
     console.log(userClicks)
 }
+
+// // Doing countClicks in forin loop.
+// // TODO: how to increment a property?
+// function countClicks(name) {
+//     for (user in userClicks) {
+//         if(name == user) {
+//             userClicks.name++;
+//         }
+//     }
+//     lastClicked(name);
+//     console.log(userClicks)
+// }
 
 // Counts which property of userClicks in div-'name' was clicked the last, and print that into div.
 function lastClicked(name) {
