@@ -30,16 +30,21 @@ function displayUser() {
     document.getElementById("message").innerHTML = activeUser;
 }
 
+// Show value of the counter.
+function counterUpdateValue(value) {
+    document.getElementById("span-counter").innerHTML = value;
+}
+
 // Increase counter by 1.
 function counterIncrementBy1() {
     currentCounter++;
-    document.getElementById("span-counter").innerHTML = currentCounter;
+    counterUpdateValue(currentCounter);
 }
 
 // Decrease counter by 1. Min. value is 0.
 function counterDecrementBy1() {
     if(currentCounter > 0) {
     currentCounter--;
-    document.getElementById("span-counter").innerHTML = currentCounter;
+    counterUpdateValue(currentCounter);
     } else {}
 }
