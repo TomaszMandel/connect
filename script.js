@@ -43,10 +43,20 @@ function displayUser() {
     document.getElementById("message").innerHTML = activeUser;
 }
 
-// Show value of the counter.
-function counterUpdateValue(value) {
-    document.getElementById("span-counter").innerHTML = value;
+// Play with a function that returns id or something.
+function generateDisplay(id) {
+    return function(value) {
+        document.getElementById(id).innerHTML = value;    
+    }
 }
+
+// // Show value of the counter.
+// function counterUpdateValue(value) {
+//     generateDisplay("span-counter")
+// }
+
+// Why does it work? Why do I need to assign it to a var?
+let counterUpdateValue = generateDisplay("span-counter")
 
 // Increase counter by 1.
 function counterIncrementBy1() {
