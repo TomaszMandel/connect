@@ -78,3 +78,7 @@ function countClicks(name) {
 function lastClicked(name) {
     document.getElementById("div-last-selected").innerHTML = "Ostatnio kliknięty user to: " + name;
 }
+
+function changeColor() {
+    
+}
