@@ -18,7 +18,7 @@ document.getElementById("span-counter").innerHTML = currentCounter;
 
 // Get input from and use it to display welcome message on leaving focus.
 function welcomeMessage() {
-    input = document.getElementById("welcome-input").value
+    let input = document.getElementById("welcome-input").value
     if(input) {
     console.log("User name is: " + input)
     document.getElementById("div-welcome-message").innerHTML = "Siadaj do gry, " + input
