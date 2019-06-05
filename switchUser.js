@@ -1,5 +1,6 @@
-// Initialize active user.
+// Initialize and display active user.
 let activeUser = "red";
+document.getElementById("message").innerHTML = activeUser;
 
 // Switch current user to the opposite one. Red to blue, and otherwise.
 function switchUser(currentUser) {

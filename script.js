@@ -11,8 +11,7 @@ let userClicks = {
 }
 console.log(userClicks)
 
-// Display active user and counter.
-document.getElementById("message").innerHTML = activeUser;
+// Display counter.
 document.getElementById("span-counter").innerHTML = currentCounter;
 
 // Get input from and use it to display welcome message on leaving focus.
