@@ -1,7 +1,6 @@
 console.log("Javascript is working and in fine mood")
 
-// Initialize active user.
-let activeUser = "red";
+
 // Initialize counter.
 let currentCounter = 0;
 // Initialize counter of clicks per user.
@@ -26,21 +25,6 @@ function welcomeMessage() {
         console.log("User name is unknown")
         document.getElementById("div-welcome-message").innerHTML = "Siadaj do gry, nienazwany graczu"
     }
-}
-
-// Switch current user to the opposite one. Red to blue, and otherwise.
-function switchUser(currentUser) {
-    if(currentUser === "red") {
-        return "blue"
-    } else {
-        return "red"
-    }
-}
-
-// Put the current value to user.
-function displayUser() {
-    activeUser = switchUser(activeUser);
-    document.getElementById("message").innerHTML = activeUser;
 }
 
 // Play with a function that returns id or something.
