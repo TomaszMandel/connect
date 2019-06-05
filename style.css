@@ -3,14 +3,16 @@
     width: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-style: ridge;
+    border-style: solid;
+    border-width: 1px;
     padding: 20px;
 }
 
 #circle {
     height: 100%;
     width: 100%;
-    border-style: ridge;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 100%;
 }
 
