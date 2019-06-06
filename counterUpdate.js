@@ -2,14 +2,7 @@
 let currentCounter = 0;
 document.getElementById("span-counter").innerHTML = currentCounter;
 
-// Return id.
-function generateDisplay(id) {
-    return function(value) {
-        document.getElementById(id).innerHTML = value;    
-    }
-}
-
-// Assign id.
+//Assign id.
 let counterUpdateValue = generateDisplay("span-counter")
 
 // Increase counter by 1.
