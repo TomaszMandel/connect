@@ -21,6 +21,5 @@ function componentToHex(c) {
 // Converts rgb values to hex.
 function rgbToHex(rgb) {
     const rgbArr = rgbStrToInt(rgb);
-    console.log(rgbArr);
     return "#" + componentToHex(rgbArr[0]) + componentToHex(rgbArr[1]) + componentToHex(rgbArr[2]);
 }
