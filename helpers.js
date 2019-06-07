@@ -7,9 +7,10 @@ function generateDisplay(id) {
 
 // From "rgb(r,g,b)" returns r,g,b as numbers.
 function rgbStrToInt(rgb) {
-    return rgb.replace("rgb(", "").replace(")", "")
+    const rgbStrip = rgb.replace("rgb(", "").replace(")", "").split(", ");
+    const arr = rgbStrip.map(Number);
+    return arr;
 }
-
 
 //Convert rgb to hex.
 function componentToHex(c) {
@@ -18,8 +19,8 @@ function componentToHex(c) {
 }
 
 // Converts rgb values to hex.
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+function rgbToHex(rgb) {
+    const rgbArr = rgbStrToInt(rgb);
+    console.log(rgbArr);
+    return "#" + componentToHex(rgbArr[0]) + componentToHex(rgbArr[1]) + componentToHex(rgbArr[2]);
 }
-
-console.log(rgbToHex(191, 62, 255))
