@@ -1,29 +1,23 @@
-// Check for current color.
-// TODO: change the color.
-// TODO: find a more concise way to express that.
-
+// Initialize colors array.
 const colors = [
     "#bf3eff",
     "#fff68f",
     "#a8251d",
 ];
-
 console.log(colors);
 
+// Returns current background color and converts it from rgb to hex.
 function getBackgroundColor() {
-    return window.getComputedStyle(circle).backgroundColor;
+    let rgb = window.getComputedStyle(circle).backgroundColor;
+    return rgbToHex(rgb);
 }
-let kolor = getBackgroundColor()
-console.log(getBackgroundColor())
 
-
-
+// // Changes colors of circle. If last element of array is active, changes to first element. Otherwise, changes to next in the array.
 // function changeColor() {
-    
 //     console.log("running");
-//     if(document.getElementById("circle").style.backgroundColor == "#bf3eff") {
-//         console.log("match");
-//     } else {
-//         console.log("no match")
+//     let currentBackground = getBackgroundColor();
+//     console.log(currentBackground);
+//     if(currentBackground == colors[colors.length-1] {
+
 //     }
 // }
