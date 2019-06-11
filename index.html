@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Taka gierka że omatkoicórko</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="div-welcome">
@@ -9,11 +10,17 @@
         </div>
         <div id="div-welcome-message"><br></div>
         <div>Timer</div>
-        <div id="div-magda" onclick="countClicks('Magda')">Magda</div>
-        <div id="div-kamila" onclick="countClicks('Kamila')">Kamila</div>
-        <div id="div-tomek" onclick="countClicks('Tomek')">Tomek</div>
+        <div>
+        <div id="div-magda" class="inline" onclick="countClicks('Magda')">Magda</div>
+        <div id="div-kamila" class="inline" onclick="countClicks('Kamila')">Kamila</div>
+        <div id="div-tomek"  class="inline" onclick="countClicks('Tomek')">Tomek</div>
+        </div>
         <div id="div-last-selected"><br></div>
         <div>Board</div>
+        <div id="square">
+        <div id="circle"></div>
+        </div>
+        <button id="color-button" onclick="cycleColor()">Change circle color</button>
         <div id="div-counter">
             Liczydełko: 
             <button id="span-counter-decrease" onclick="counterDecrementBy1()">-1</button>
@@ -27,5 +34,11 @@
         </div>
         <div>Comments</div>
         <script src="script.js"></script>
+        <script src="helpers.js"></script>
+        <script src="developedFunctions.js"></script>
+        <script src="switchUser.js"></script>
+        <script src="counterUpdate.js"></script>
+        <script src="countClicks.js"></script>
+        <script src="changeCircle.js"></script>        
     </body>
 </html>
