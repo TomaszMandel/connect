@@ -1,17 +1,16 @@
 import React from 'react';
 
-export const InputField = () => {
+export const InputField = (props) => {
     return (
         <div>
             <div>What's your name?</div>
             <input
              id="welcome-input"
              className="inputField"
-            //  value={this.state.value}
-
+             value={props.value}
+             onChange={props.handleChange}
              >
              </input>
-
         </div>
     );
 }
