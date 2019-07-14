@@ -1,4 +1,4 @@
-#square {
+/* #square {
     height: 100px;
     width: 100px;
     margin-top: 10px;
@@ -16,11 +16,15 @@
     border-width: 1px;
     border-radius: 100%;
     background-color: #bf3eff
-}
+} */
 
-/* Margin and padding around player's names */
+/* Margin and padding around player's names
 .inline {
     display: inline;
     padding: 10px;
     margin: 10px    
+} */
+
+.inputField {
+    color: blue
 }
