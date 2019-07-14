@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { App } from './src/components/App/app';
-import { InputField } from './src/components/NameInput/nameInput';
+import { App } from './src/components/App/app';
+// import { InputField } from './src/components/NameInput/inputField';
 
 console.log("Javascript is working and in fine mood")
 
@@ -14,13 +14,5 @@ console.log("Javascript is working and in fine mood")
 // ReactDOM.render(
 //     <InputField />, document.getElementById("name-input")
 // )
-
-// class App extends React.Component {
-//     render() {
-//         return (
-//             <InputField />
-//         );
-//     };
-// }
 
 ReactDOM.render(<App />, document.getElementById('root'))
