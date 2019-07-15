@@ -1,11 +1,13 @@
 import React from 'react';
 import { InputField } from '../InputField/inputField';
-import { InputCommon } from '../common/Input';
+import { WelcomeMessage } from '../WelcomeMessage/WelcomeMessage';
 
 export class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {
+            value: '',
+    };
 
         this.handleChange = this.handleChange.bind(this);
     }
@@ -18,7 +20,7 @@ export class App extends React.Component {
         return (
             <div>
                 <InputField value={this.state.value} onChange={this.handleChange} />
-                <InputCommon />
+                <WelcomeMessage user={this.state.value} />
             </div>
         );
     };

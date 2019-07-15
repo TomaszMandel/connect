@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { App } from './src/components/App/app';
 // import { InputField } from './src/components/NameInput/inputField';
 
-console.log("Javascript is working and in fine mood")
+console.log("Javascript up")
 
 // const USER = {
 //     name: "Tomek", 
