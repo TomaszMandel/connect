@@ -1,5 +1,6 @@
 import React from 'react';
 import { InputField } from '../InputField/inputField';
+import { InputCommon } from '../common/Input';
 
 export class App extends React.Component {
     constructor(props) {
@@ -17,6 +18,7 @@ export class App extends React.Component {
         return (
             <div>
                 <InputField value={this.state.value} onChange={this.handleChange} />
+                <InputCommon />
             </div>
         );
     };
