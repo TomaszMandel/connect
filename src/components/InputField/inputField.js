@@ -8,7 +8,7 @@ export const InputField = (props) => {
              id="welcome-input"
              className="inputField"
              value={props.value}
-             onChange={props.handleChange}
+             onChange={props.onChange}
              >
              </input>
         </div>
