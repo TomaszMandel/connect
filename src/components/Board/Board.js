@@ -10,6 +10,21 @@ export class Board extends React.Component {
         }
     }
 
+    changeUser(user) {
+        if (user == "Red") {
+            this.setState({
+                activeUser: "Blue",
+                activeColor: "blue",
+                }
+            )
+        } else {
+            this.setState({
+                activeUser: "Red",
+                activeColor: "red",
+            })
+        }
+    }
+
     render() {
         return (
             <div>
