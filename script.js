@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './src/components/App/app';
+import { App } from './src/components/App/App';
 // import { InputField } from './src/components/NameInput/inputField';
 
 console.log("Javascript up")
