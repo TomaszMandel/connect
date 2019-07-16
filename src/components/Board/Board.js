@@ -1,14 +1,20 @@
 import React from 'react';
 import { Circle } from './Circle';
 
-const ACTIVE_USER = 'RED'
-
 export class Board extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+        activeUser: "Red",
+        activeColor: "red",
+        }
+    }
+
     render() {
         return (
             <div>
                 Board
-                <Circle user={ACTIVE_USER} />
+                <Circle activeUser={this.state.activeUser} activeColor={this.state.activeColor} onClick={this.state.changeUser} />
             </div>
         );
     };
