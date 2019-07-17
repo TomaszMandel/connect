@@ -5,9 +5,10 @@ export class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-        activeUser: "Red",
-        activeColor: "red",
+        activeUser: "none",
+        activeColor: "transparent",
         }
+        this.changeUser = this.changeUser.bind(this);
     }
 
     changeUser(user) {
@@ -29,7 +30,7 @@ export class Board extends React.Component {
         return (
             <div>
                 Board
-                <Circle activeUser={this.state.activeUser} activeColor={this.state.activeColor} onClick={this.state.changeUser} />
+                <Circle activeUser={this.state.activeUser} activeColor={this.state.activeColor} onClick={this.changeUser} />
             </div>
         );
     };
