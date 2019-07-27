@@ -1,13 +1,13 @@
 import React from 'react';
-// import { InputField } from '../InputField/inputField';
-// import { WelcomeMessage } from '../WelcomeMessage/WelcomeMessage';
-import { Board } from './../Board/Board';
+import { Header } from './../Header/Header';
+import { GameBox } from '../GameBox/GameBox';
 
 export class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             value: '',
+            headerName: 'Connect',
     };
 
         this.handleChange = this.handleChange.bind(this);
@@ -19,10 +19,9 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div>
-                {/* <InputField value={this.state.value} onChange={this.handleChange} /> */}
-                {/* <WelcomeMessage user={this.state.value} /> */}
-                <Board />
+            <div className="app">
+                <Header headerName={this.state.headerName} />
+                <GameBox />
             </div>
         );
     };

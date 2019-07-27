@@ -1,3 +1,25 @@
+.app {
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#info-box {
+    margin: 20px;
+}
+
+#board {
+    border: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
 .inputField {
     color: blue
 }
@@ -17,4 +39,12 @@
     border-color: black;
     border-style: solid;
     border-radius: 50%;
+}
+
+.header {
+    color: black;
+    font-size: 22px;
+    margin: 5px 0px;
+    border-bottom-style: solid;
+    border-bottom-color: brown;
 }
