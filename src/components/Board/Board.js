@@ -2,28 +2,13 @@ import React from 'react';
 import { Circle } from './Circle';
 
 export class Board extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { 
-    //     activeUser: "none",
-    //     activeColor: "transparent",
-    //     }
-    //     this.changeUser = this.changeUser.bind(this);
-    // }
-
-    // changeUser(user) {
-    //     if (user == "Red") {
-    //         this.setState({
-    //             activeUser: "Blue",
-    //             activeColor: "blue",
-    //             }
+    // renderCircle(i) {
+    //     return(
+    //         <Circle 
+    //         activeUser={this.props.activeUser[i]} 
+    //         activeColor={this.props.activeColor[i]} 
+    //         onClick={this.props.onClick[i]} />
     //         )
-    //     } else {
-    //         this.setState({
-    //             activeUser: "Red",
-    //             activeColor: "red",
-    //         })
-    //     }
     // }
 
     render() {
