@@ -6,22 +6,22 @@ export class GameBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-        activeUser: "none",
+        activeUser: "Red (first round)",
         activeColor: "transparent",
         }
         this.changeUser = this.changeUser.bind(this);
     }
 
     changeUser(user) {
-        if (user == "Red") {
+        if (user == "Blue") {
             this.setState({
-                activeUser: "Blue",
+                activeUser: "Red",
                 activeColor: "blue",
                 }
             )
         } else {
             this.setState({
-                activeUser: "Red",
+                activeUser: "Blue",
                 activeColor: "red",
             })
         }
