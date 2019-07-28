@@ -2,21 +2,30 @@ import React from 'react';
 import { Circle } from './Circle';
 
 export class Board extends React.Component {
-    // renderCircle(i) {
-    //     return (
-    //         <Circle 
-    //         activeUser={this.props.activeUser} 
-    //         activeColor={this.props.activeColor} 
-    //         onClick={this.props.onClick} />
+    // constructor(props) {
+    //     super(props);
+    //     this.renderRow = this.renderRow.bind(this);
+    // }
+
+    // renderRow(rows) {
+    //     for (row in rows) {
+    //         row.map(i => {
+    //             return (
+    //                 <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
+    //             )
+    //         }
     //         )
+    //     }
     // }
 
     render() {
         return (
             <div>
-                Board
+                <h2>Board</h2>
                 <div id="board">
                 {/* <Circle activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} /> */}
+                {/* {renderRow(this.props.rows)} */}
+
                         {this.props.rows.row1.map(i => {
                             return (
                                 <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
