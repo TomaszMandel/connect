@@ -8,6 +8,12 @@ export class GameBox extends React.Component {
         this.state = { 
         activeUser: "Red (first round)",
         activeColor: "transparent",
+        rows: {
+            row1: [...Array(7).keys()],
+            row2: [...Array(7).keys()],
+            row3: [...Array(7).keys()],
+            row4: [...Array(7).keys()],
+        },
         }
         this.changeUser = this.changeUser.bind(this);
     }
@@ -30,7 +36,7 @@ export class GameBox extends React.Component {
     render() {
         return(
         <div className="flex-board">
-            <Board activeUser={this.state.activeUser} activeColor={this.state.activeColor} onClick={this.changeUser} />
+            <Board activeUser={this.state.activeUser} activeColor={this.state.activeColor} onClick={this.changeUser} rows={this.state.rows} />
             <InfoBox activeUser={this.state.activeUser} />
         </div>
         )
