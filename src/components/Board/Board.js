@@ -24,9 +24,14 @@ export class Board extends React.Component {
                 <h2>Board</h2>
                 <div id="board">
                 {/* <Circle activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} /> */}
-                {/* {renderRow(this.props.rows)} */}
 
-                        {this.props.rows.row1.map(i => {
+                {this.props.scoreRows.map((element, index) => {
+                    return(
+                        <Circle index={index} scoreRows={this.props.scoreRows} activeUser={this.props.activeUser} activeColor={this.props.activeColor} changeUser={this.props.changeUser} />
+                    )
+                })}
+
+                        {/* {this.props.rows.row1.map(i => {
                             return (
                                 <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
                                     )
@@ -56,7 +61,7 @@ export class Board extends React.Component {
                                     )
                                 }
                             )
-                        }
+                        } */}
                 </div>
             </div>
         );

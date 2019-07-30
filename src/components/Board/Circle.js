@@ -1,10 +1,26 @@
 import React from 'react';
 
-export const Circle = (props) => {
-    return (
-        <div>
-            <div className="div-circle" style={{backgroundColor:props.activeColor}} onClick={() => props.onClick(props.activeUser)} ></div>
-            {/* <div>User: {props.activeUser}; color: {props.activeColor}</div> */}
-        </div>
-    )
+export class Circle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            color: 'transparent',
+        }
+        this.changeColorAndUser = this.changeColorAndUser.bind(this);
+    }
+
+    changeColorAndUser() {
+        this.setState(
+            {
+                color: this.props.activeColor,
+            }
+        );
+        this.props.changeUser(this.props.index);
+    }
+
+    render() {
+        return (
+            <div className="div-circle" style={{backgroundColor:this.state.color}} onClick={this.changeColorAndUser} ></div>
+        )
+    }
 }

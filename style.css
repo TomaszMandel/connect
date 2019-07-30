@@ -19,7 +19,7 @@
     border-style: solid;
     padding: 5px;
     display: flex;
-    width: 400px;
+    width: 450px;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -39,6 +39,7 @@
 .div-circle {
     height: 50px;
     width: 50px;
+    margin: 5px;
     border-width: 2px;
     border-color: black;
     border-style: solid;

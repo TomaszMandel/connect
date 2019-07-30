@@ -7,36 +7,41 @@ export class GameBox extends React.Component {
         super(props);
         this.state = { 
         activeUser: "Red (first round)",
-        activeColor: "transparent",
-        rows: {
-            row1: [...Array(7).keys()],
-            row2: [...Array(7).keys()],
-            row3: [...Array(7).keys()],
-            row4: [...Array(7).keys()],
-        },
+        activeColor: "red",
+        scoreRows: ["", "","","","","",""],
         }
         this.changeUser = this.changeUser.bind(this);
     }
 
-    changeUser(user) {
-        if (user == "Blue") {
+    changeUser(circleIndex) {
+        if (this.state.activeUser == "Blue") {
             this.setState({
                 activeUser: "Red",
-                activeColor: "blue",
+                activeColor: "red",
                 }
             )
         } else {
             this.setState({
                 activeUser: "Blue",
-                activeColor: "red",
+                activeColor: "blue",
             })
         }
+        const newList = this.state.scoreRows.map((element, index) => {
+            if(index === circleIndex) {
+                return this.state.activeUser
+            } else {
+                return element
+            }
+        })
+        this.setState({
+            scoreRows: newList,
+        }, () => console.log(this.state.scoreRows) )
     }
 
     render() {
         return(
         <div className="flex-board">
-            <Board activeUser={this.state.activeUser} activeColor={this.state.activeColor} onClick={this.changeUser} rows={this.state.rows} />
+            <Board activeUser={this.state.activeUser} activeColor={this.state.activeColor} changeUser={this.changeUser} scoreRows={this.state.scoreRows} />
             <InfoBox activeUser={this.state.activeUser} />
         </div>
         )
