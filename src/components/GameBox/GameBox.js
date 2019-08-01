@@ -8,7 +8,12 @@ export class GameBox extends React.Component {
         this.state = { 
         activeUser: "Red (first round)",
         activeColor: "red",
-        scoreRows: ["", "","","","","",""],
+        scoreRows: [
+            ["", "","","","","",""],
+            ["", "","","","","",""],
+            ["", "","","","","",""],
+            ["", "","","","","",""],
+        ]
         }
         this.changeUser = this.changeUser.bind(this);
     }

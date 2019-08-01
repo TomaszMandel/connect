@@ -23,45 +23,18 @@ export class Board extends React.Component {
             <div>
                 <h2>Board</h2>
                 <div id="board">
-                {/* <Circle activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} /> */}
-
                 {this.props.scoreRows.map((element, index) => {
                     return(
-                        <Circle index={index} scoreRows={this.props.scoreRows} activeUser={this.props.activeUser} activeColor={this.props.activeColor} changeUser={this.props.changeUser} />
+                        <Circle 
+                        index={index} 
+                        // indexColumn={indexColumn} 
+                        scoreRows={this.props.scoreRows} 
+                        activeUser={this.props.activeUser} 
+                        activeColor={this.props.activeColor} 
+                        changeUser={this.props.changeUser} 
+                        />
                     )
                 })}
-
-                        {/* {this.props.rows.row1.map(i => {
-                            return (
-                                <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
-                                    )
-                                }
-                            )
-                        }
-                        <br></br>
-                        {this.props.rows.row2.map(i => {
-                            return (
-                                <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
-                                    )
-                                }
-                            )
-                        }
-                        <br></br>
-                        {this.props.rows.row3.map(i => {
-                            return (
-                                <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
-                                    )
-                                }
-                            )
-                        }
-                        <br></br>
-                        {this.props.rows.row4.map(i => {
-                            return (
-                                <Circle key={i} activeUser={this.props.activeUser} activeColor={this.props.activeColor} onClick={this.props.onClick} />
-                                    )
-                                }
-                            )
-                        } */}
                 </div>
             </div>
         );
