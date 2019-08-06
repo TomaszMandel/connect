@@ -24,6 +24,7 @@ export class Circle extends React.Component {
 
     
     render() {
+        console.log('circle', this.props.circleState)
         return (
             <div className="div-circle" 
             style={{backgroundColor:this.state.color}} 

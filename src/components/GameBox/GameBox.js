@@ -6,18 +6,16 @@ export class GameBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-        activeUser: "Red (first round)",
+        activeUser: "Red",
         activeColor: "red",
         scoreRows: [
-            ["","","","","","",""],
-            ["","","","","","",""],
-            ["","","","","","",""],
-            ["","","","","","",""],
-            ["","","","","","",""],
-            ["","","","","","",""],
+            ["","",""],
+            ["","",""],
+            ["","",""],
         ]
         }
         this.changeUser = this.changeUser.bind(this);
+        this.resetBoard = this.resetBoard.bind(this);
     }
 
     changeUser(circleIndexY, circleIndexX) {
@@ -38,25 +36,37 @@ export class GameBox extends React.Component {
         
         this.setState({
             scoreRows: newList,
-        }, () => console.log(this.state.scoreRows) )
+        }, () => this.checkWinner())
+    }
+
+    checkWinner() {
+        for(const row in this.state.scoreRows) { 
+        if(this.state.scoreRows[row][0] === this.state.scoreRows[row][1]&&this.state.scoreRows[row][1] === this.state.scoreRows[row][2]) {
+            console.log('winner is ', this.state.scoreRows[row][0])
+        } else {
+            return
+        }
+    }
+    }
+
+    resetBoard() {
+        this.setState({
+            scoreRows: [
+                ["","",""],
+                ["","",""],
+                ["","",""],
+            ]
+        })
+        console.log(this.state.scoreRows)
     }
 
     render() {
         return(
         <div className="flex-board">
             <Board activeUser={this.state.activeUser} activeColor={this.state.activeColor} changeUser={this.changeUser} scoreRows={this.state.scoreRows} />
-            <InfoBox activeUser={this.state.activeUser} />
+            <InfoBox activeUser={this.state.activeUser} resetBoard={this.resetBoard} />
         </div>
         )
     }
     
 }
-
-
-// const newList = this.state.scoreRows.map((element, indexY) => {
-//     if(indexY === circleIndexY) {
-//         return this.state.activeUser
-//     } else {
-//         return element
-//     }
-// })

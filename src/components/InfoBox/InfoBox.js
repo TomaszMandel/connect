@@ -10,6 +10,8 @@ export class InfoBox extends React.Component {
                 <br></br>
                 <div>Timer:</div>
                 <div id="timer">{this.props.timer}</div>
+                <br></br>
+                <button onClick={this.props.resetBoard}>Reset game</button>
             </div>
         )
     }

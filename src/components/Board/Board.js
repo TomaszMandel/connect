@@ -17,7 +17,8 @@ export class Board extends React.Component {
                             indexX={indexX}
                             activeUser={this.props.activeUser} 
                             activeColor={this.props.activeColor} 
-                            changeUser={this.props.changeUser} />
+                            changeUser={this.props.changeUser}
+                            circleState={this.props.scoreRows[indexY][indexX]} />
                         </div>
                     )
 
