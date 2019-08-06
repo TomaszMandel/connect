@@ -15,12 +15,17 @@ export class Circle extends React.Component {
                 color: this.props.activeColor,
             }
         );
-        this.props.changeUser(this.props.index);
+        this.props.changeUser(this.props.indexY);
     }
 
     render() {
         return (
-            <div className="div-circle" style={{backgroundColor:this.state.color}} onClick={this.changeColorAndUser} ></div>
+            console.log("dupa"),
+            <div className="div-circle" 
+            style={{backgroundColor:this.state.color}} 
+            onClick={this.changeColorAndUser} 
+            >
+            </div>
         )
     }
 }

@@ -9,16 +9,16 @@ export class GameBox extends React.Component {
         activeUser: "Red (first round)",
         activeColor: "red",
         scoreRows: [
-            ["", "","","","","",""],
-            ["", "","","","","",""],
-            ["", "","","","","",""],
-            ["", "","","","","",""],
+            ["","","","","","",""],
+            ["","","","","","",""],
+            ["","","","","","",""],
+            ["","","","","","",""],
         ]
         }
         this.changeUser = this.changeUser.bind(this);
     }
 
-    changeUser(circleIndex) {
+    changeUser(circleIndexY) {
         if (this.state.activeUser == "Blue") {
             this.setState({
                 activeUser: "Red",
@@ -31,8 +31,8 @@ export class GameBox extends React.Component {
                 activeColor: "blue",
             })
         }
-        const newList = this.state.scoreRows.map((element, index) => {
-            if(index === circleIndex) {
+        const newList = this.state.scoreRows.map((element, indexY) => {
+            if(indexY === circleIndexY) {
                 return this.state.activeUser
             } else {
                 return element
