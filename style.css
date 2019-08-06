@@ -18,10 +18,10 @@
     border: 1px;
     border-style: solid;
     padding: 5px;
-    display: flex;
+    /* display: flex; */
     width: 450px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
 }
 
 .inputField {
@@ -34,6 +34,10 @@
 
 .div-disabled {
     color: grey
+}
+
+.circle-row {
+    display: flex
 }
 
 .div-circle {

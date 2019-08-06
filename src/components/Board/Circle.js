@@ -10,17 +10,21 @@ export class Circle extends React.Component {
     }
 
     changeColorAndUser() {
-        this.setState(
-            {
-                color: this.props.activeColor,
-            }
-        );
-        this.props.changeUser(this.props.indexY);
+        if(this.state.color === 'transparent') {
+            this.setState(
+                {
+                    color: this.props.activeColor,
+                }
+            );
+            this.props.changeUser(this.props.indexY, this.props.indexX);
+        } else {
+            return
+        }
     }
 
+    
     render() {
         return (
-            console.log("dupa"),
             <div className="div-circle" 
             style={{backgroundColor:this.state.color}} 
             onClick={this.changeColorAndUser} 

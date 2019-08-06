@@ -9,22 +9,20 @@ export class Board extends React.Component {
                 <h2>Board</h2>
                 <div id="board">
                     {this.props.scoreRows.map((elementY, indexY) => 
-                    <ul>
+                    <span className="circle-row">
                     {elementY.map((elementX, indexX) => 
                         <div>
                             <Circle 
                             indexY={indexY} 
                             indexX={indexX}
-                            scoreRows={this.props.scoreRows} 
                             activeUser={this.props.activeUser} 
                             activeColor={this.props.activeColor} 
                             changeUser={this.props.changeUser} />
-                            {console.log("elemY/X: " + elementY + "/" + elementX, "indexY/X: " + indexY + "/" + indexX)}
                         </div>
                     )
 
                 }
-                </ul>
+                </span>
                 )}
                 </div>
             </div>
