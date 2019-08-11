@@ -40,9 +40,9 @@ export class GameBox extends React.Component {
     }
 
     checkWinner() {
-        for(const row in this.state.scoreRows) { 
-        if(this.state.scoreRows[row][0] === this.state.scoreRows[row][1]&&this.state.scoreRows[row][1] === this.state.scoreRows[row][2]) {
-            console.log('winner is ', this.state.scoreRows[row][0])
+        for(let i = 0; i < 3; i++) { 
+        if(this.state.scoreRows[i][0] === this.state.scoreRows[i][1]&&this.state.scoreRows[i][1] === this.state.scoreRows[i][2]) {
+            console.log('winner is ', this.state.scoreRows[i][0])
         } else {
             return
         }
