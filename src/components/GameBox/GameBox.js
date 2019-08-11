@@ -41,12 +41,25 @@ export class GameBox extends React.Component {
 
     checkWinner() {
         for(let i = 0; i < 3; i++) { 
-        if(this.state.scoreRows[i][0] === this.state.scoreRows[i][1]&&this.state.scoreRows[i][1] === this.state.scoreRows[i][2]) {
-            console.log('winner is ', this.state.scoreRows[i][0])
-        } else {
-            return
+        if(
+            // Check rows for 3 of the same color
+            this.state.scoreRows[i][0] === this.state.scoreRows[i][1]&&this.state.scoreRows[i][1] === this.state.scoreRows[i][2]) {
+                console.log('winner is ', this.state.scoreRows[i][0])
+            } else if (
+            // Check columns for 3 of the same color
+            this.state.scoreRows[0][i] === this.state.scoreRows[1][i]&&this.state.scoreRows[1][i] === this.state.scoreRows[2][i]) {
+                console.log('winner is ', this.state.scoreRows[0][i])
+                } else if(
+                    // Check diagonally for 3 of the same color
+                    this.state.scoreRows[0][0] === this.state.scoreRows[1][1]&&this.state.scoreRows[1][1] === this.state.scoreRows[2][2]
+                    || this.state.scoreRows[0][2] === this.state.scoreRows[1][1]&&this.state.scoreRows[1][1] === this.state.scoreRows[2][0]
+                 ) {
+                    // Winning user has to take [1][1] circle
+                    console.log('winner is ', this.state.scoreRows[1][1])
+                    } else {
+                        return
+                    }
         }
-    }
     }
 
     resetBoard() {
